@@ -4,15 +4,15 @@ Food For Thought is a dinner helper application built on html, css and javascrip
 
 ###Wireframes
 #####Main
-![](/Users/bengrzybowski/Documents/pagetop.png)
+![](pagetop.png)
 #####Bottom
-![](/Users/bengrzybowski/Documents/pagebottom.png)
+![](pagebottom.png)
 #####Get Started\Search
-![](/Users/bengrzybowski/Documents/search.png)
+![](search.png)
 #####Search Results(replaces recommendations)
-![](/Users/bengrzybowski/Documents/results.png)
+![](results.png)
 #####Mobile
-![](/Users/bengrzybowski/Documents/mobile.png)
+![](mobile.png)
 
 ###API
 This app will call the recipes API from https://www.edamam.com/. The app will be calling the search API.
