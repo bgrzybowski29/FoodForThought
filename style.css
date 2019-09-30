@@ -1,0 +1,75 @@
+header{
+    font-size: 10em;
+}
+  
+  .item {
+      display: inline-block;
+    background-color: lightblue;
+    margin: 0 0 1em;
+    border-radius: 15px 15px 15px 15px;
+    width: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  h1{
+      font-size: 1.1em;
+      font-weight: bold;
+  }
+  h2{
+    font-size: .8em;
+  }
+  a{
+    font-size: .8em;
+  }
+
+  
+   body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #000; */
+    color:black;
+    font-size: 16px;
+    /* width: 100px; */
+  } 
+
+  /* REFERENCE Got this from https://blog.jayway.com/2017/07/13/expandable-faq-items-no-javascript/ */
+   .collapsible {
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 5px;
+  }
+  .collapsible input {
+    position: absolute;
+    left: -9999px;
+  }
+  .collapsible input:focus ~ .collapser {
+    border-color: grey;
+  }
+  .collapsible .collapser {
+    cursor: pointer;
+    border: 1px transparent dotted;
+  }
+  .collapsible .arrow {
+    float: right;
+    margin-left: 0.5em;
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform 0.25s ease-out;
+  }
+  .collapsible input:checked ~ .arrow,
+  .collapsible input:checked ~ .collapser .arrow {
+    transform: rotate(270deg);
+  }
+  .collapsible .collapsed {
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 0.25s, margin 0.5s 0.25s, font-size 0.5s 0.25s, padding 0.5s 0.25s;
+  }
+  .collapsible input:checked ~ .collapsed {
+    font-size: 16px;
+    opacity: 1;
+    height: auto;
+    padding: 5px 0;
+    transition: margin 0.25s, padding 0.25s, font-size 0.25s, opacity 0.5s 0.25s;
+  } 
