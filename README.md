@@ -1,37 +1,37 @@
 
-##Title
+## Title
 
-###Description
+### Description
 
 Food For Thought is a dinner helper application built on html, css and javascript.It solves the problem ofnot knowing what to make for dinner. It will provide some recommendations and also allow the users to search by food items they already have and exclude ones the don't want.
 
-###Wireframes
+### Wireframes
 
-#####Main
+##### Main
 
 ![](pagetop.png)
 
-#####Bottom
+##### Bottom
 
 ![](pagebottom.png)
 
-#####Get Started\Search
+##### Get Started\Search
 
 ![](search.png)
 
-#####Search Results(replaces recommendations)
+##### Search Results(replaces recommendations)
 
 ![](results.png)
 
-#####Mobile
+##### Mobile
 
 ![](mobile.png)
 
-###API
+### API
 
 This app will call the recipes API from https://www.edamam.com/. The app will be calling the search API.
 
-###Features
+### Features
 
 * Provide 3 recommendations - the app will contain multiple arrays containing a protein and veg. On load of page a random protein and veg combo will be selected and call the api so that unique recommendations will return each visit. 
 
@@ -45,7 +45,7 @@ This app will call the recipes API from https://www.edamam.com/. The app will be
 
 * Ingredients an Nutrients are lists. They will be collapsible.
 
-###Stretch goals
+### Stretch goals
 
 * Add scrolling picture on main page background.
 
