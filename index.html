@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <!-- Used for carousel end -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="script.js"></script>
@@ -19,10 +20,12 @@
 
 <body>
   <header>
-    <div class="container">
-      <nav>
+    <div class="container" id="myTopnav">
+      <nav id="page-nav">
         <ul>
-          <li class="nav-items"><a href="index.html">Home</a></li>
+          <li class="nav-items">
+            <a href="index.html">Home</a>
+          </li>
           <li class="nav-items"><a href="#">About</a></li>
           <li class="nav-items"><a href='javascript:;' onclick='showSearch();'>Get Started</a></li>
           <li class="nav-items"><a href="#">Contact Us</a></li>
@@ -33,7 +36,7 @@
   <main>
     <section id="hero-section">
       <div class="container">
-        <h2>Carousel Example</h2>
+        <h2></h2>
         <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="4000">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -58,7 +61,7 @@
         <form class="col-sm-12" id="searchForm">
           <div class="form-group col-sm-3 col-sm-offset-4">
             <div id="search-group" class="input-group input-group-lg center-block">
-              <p id="title">FOOD for THOUGHT</p>
+              <p class="title">FOOD for THOUGHT</p>
               <div id="search-form">
                 <p>Food Items:</p>
                 <textarea id="included-food" rows="3" cols="50"></textarea>
@@ -75,7 +78,7 @@
         <form class="col-sm-12" id="search-form-top">
           <div class="form-group-top col-sm-3 col-sm-offset-4">
             <div id="search-group-top" class="input-group input-group-lg center-block">
-              <p id="title-top">FOOD for THOUGHT</p>
+              <p class="title">FOOD for THOUGHT</p>
               <hr>
               <div id="search-form-sub-top">
                 <p>Recipes from items<br> you already have<br> in your fridge.</p>

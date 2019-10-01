@@ -7,6 +7,8 @@ body{
 .masonry{
   margin-top: 800px;
 }
+
+/* start Nav Section */
 header{
   overflow: hidden;
   background-color: white;
@@ -18,8 +20,8 @@ header{
 .container nav ul{
   list-style-type: none;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  margin: 20px 50px 20px 50px;
+  grid-template-columns: 20% 25% 25% 25%;
+  /* margin: 20px 50px 20px 50px; */
 }
 .nav-items{
   justify-self: center;
@@ -29,6 +31,12 @@ header{
   font-size: 1.5em;
   color: black;
 }
+
+
+/* End Nav section */
+
+
+
 #myCarousel{
   height: 70px;
   margin-top: 30px;
@@ -54,7 +62,7 @@ header{
   height:  300px;
   width:40vw;
 }
-#title{
+.title{
   text-align: center;
   font-family: 'Mansalva', sans-serif;
   font-size: 2.5em;
@@ -64,12 +72,6 @@ header{
   height:  250px;
   width:40vw;
 }
-#title-top{
-  text-align: center;
-  font-family: 'Mansalva', sans-serif;
-  font-size: 2.5em;
-}
-
 #search-form{
   display: grid;
   grid-template-columns: 30% 70%;
@@ -99,15 +101,19 @@ header{
   align-self: center;
   justify-self: center;
 }
+#searchForm p{
+  font-size: 1.5em;
+}
 #search-button
 {
     grid-column-start: 1;
     grid-column-end: 3;
+    font-size: 1.5em;
 }
 textarea{
   resize: none;
-  margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 1.5em;
 } 
 .recipe-item {
     display: inline-block;
@@ -126,14 +132,14 @@ textarea{
     padding-left: 5px;
   }
   h1{
-      font-size: 1.1em;
+      font-size: 2em;
       font-weight: bold;
   }
   h2{
-    font-size: .8em;
+    font-size: 1.5em;
   }
   a{
-    font-size: .8em;
+    font-size: 1.5em;
   }
   footer {
     padding-top: 10px;
@@ -169,9 +175,9 @@ textarea{
   .collapsible .collapser {
     cursor: pointer;
     border: 1px transparent dotted;
+    font-size: 1.5em;
   }
   .collapsible .arrow {
-    float: right;
     margin-left: 0.5em;
     display: inline-block;
     transform: rotate(90deg);
@@ -194,15 +200,17 @@ textarea{
     height: auto;
     padding: 5px 0;
     transition: margin 0.25s, padding 0.25s, font-size 0.25s, opacity 0.5s 0.25s;
-  } 
+  }
+
   @media only screen 
   and (max-width: 630px){
     body{
-      font-size: 8px;
+      font-size: 10px;
     }
     #searchForm {
         top:15%;
     }
+
     #search-form-top{
       top:15%;
     }
@@ -219,8 +227,16 @@ textarea{
     }
     .masonry{
       margin-top: 275px;
+      display: flex;
+      flex-direction: column;
+    }
+    .recipe-item {
+      align-self: center;
     }
     .item{
       height: 250px;
     }
+    textarea{
+      font-size: 1em;
+    } 
   }

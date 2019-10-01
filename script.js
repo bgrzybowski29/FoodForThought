@@ -23,7 +23,7 @@ button.addEventListener("click", async function () {
     <img src="${dinnerItems[i].recipe.image}">
     <div class="recipe-item-sub">
     <h1>${dinnerItems[i].recipe.label}</h1>
-            <h2>Calories: ${dinnerItems[i].recipe.calories}</h2>
+            <h2>Calories: ${Math.round(dinnerItems[i].recipe.calories)}</h2>
             <h2>Label: ${dinnerItems[i].recipe.dietLabels}</h2>
             <h2>Source: ${dinnerItems[i].recipe.source}</h2>
             <a href="${dinnerItems[i].recipe.url}">Goto Recipe</a>
@@ -33,6 +33,11 @@ button.addEventListener("click", async function () {
             <span class="arrow">&gt;</span>
             <div class="collapsed">${dinnerItems[i].recipe.ingredientLines}</div>
             </label>
+            <label class="collapsible">
+            <input type="checkbox" />
+            <span class="collapser">Health Labels:</span>
+            <span class="arrow">&gt;</span>
+            <div class="collapsed">${dinnerItems[i].recipe.healthLabels}</div>
             <h2>Prep Time: ${dinnerItems[i].recipe.totalTime}</h2>  
             </div>  
     </div>`;
@@ -43,9 +48,7 @@ button.addEventListener("click", async function () {
 
 
 })
-/* <h2>${data.hits[i].recipe.ingredientLines}</h2>
-<h2>HealthLabel: ${data.hits[i].recipe.healthLabels}</h2>
-<h2>Nutrients: ${data.hits[i].recipe.totalNutrients}</h2>  */
+
 function validateInput() {
   let includedFood = document.getElementById("included-food").value;
   let excludedFood = document.getElementById("excluded-food").value;
