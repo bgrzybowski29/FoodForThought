@@ -2,12 +2,10 @@ body{
   margin: 0;
   font-family: 'Mansalva', sans-serif;
   color:black;
-  font-size: 16px;
   display: block;
 }
 .masonry{
   margin-top: 800px;
-  /* padding: 200px; */
 }
 header{
   overflow: hidden;
@@ -30,7 +28,8 @@ header{
   text-decoration: none;
   font-size: 1.5em;
   color: black;
-}#myCarousel{
+}
+#myCarousel{
   height: 70px;
   margin-top: 30px;
 }
@@ -44,7 +43,7 @@ header{
 }
 #searchForm {
 	position:absolute;
-  	top:40%;
+    top:40%;
 }
 #search-form-top{
   position:absolute;
@@ -53,7 +52,7 @@ header{
 .form-group{
   background: rgba(255, 255, 255, 0.6);
   height:  300px;
-  width: 600px;
+  width:40vw;
 }
 #title{
   text-align: center;
@@ -63,7 +62,7 @@ header{
 .form-group-top{
   background: rgba(255, 255, 255, 0.6);
   height:  250px;
-  width: 600px;
+  width:40vw;
 }
 #title-top{
   text-align: center;
@@ -140,6 +139,8 @@ textarea{
     padding-top: 10px;
     text-align: center;
     background-color:white;
+    bottom: 0;
+    width: 100%;
   }
   .imagefooter{
     width: 50px;
@@ -196,5 +197,30 @@ textarea{
   } 
   @media only screen 
   and (max-width: 630px){
-
+    body{
+      font-size: 8px;
+    }
+    #searchForm {
+        top:15%;
+    }
+    #search-form-top{
+      top:15%;
+    }
+    .form-group{
+      width:90vw;
+      height:175px;
+    }
+    .form-group-top{
+      width:90vw;
+      height: 150px;
+    }
+    #search-form-sub-top{
+      height: 100px;
+    }
+    .masonry{
+      margin-top: 275px;
+    }
+    .item{
+      height: 250px;
+    }
   }
