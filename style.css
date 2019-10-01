@@ -208,11 +208,11 @@ textarea{
       font-size: 10px;
     }
     #searchForm {
-        top:15%;
+        top:12%;
     }
 
     #search-form-top{
-      top:15%;
+      top:12%;
     }
     .form-group{
       width:90vw;
@@ -226,10 +226,13 @@ textarea{
       height: 100px;
     }
     .masonry{
-      margin-top: 275px;
+      margin-top: 200px;
+      padding-left: 20px;
+      margin-right: 20px;
       display: flex;
-      flex-direction: column;
+      overflow-x: auto;
     }
+    .masonry::-webkit-scrollbar {    display: none;}
     .recipe-item {
       align-self: center;
     }
