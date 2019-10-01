@@ -1,15 +1,110 @@
-header{
-    font-size: 10em;
+body{
+  margin: 0;
+  font-family: 'Mansalva', sans-serif;
+  color:black;
+  font-size: 16px;
+  display: block;
 }
+.masonry{
+  margin-top: 800px;
+  /* padding: 200px; */
+}
+header{
+  overflow: hidden;
+  background-color: white;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 99;
+}
+.container nav ul{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 20px 50px 20px 50px;
+}
+.nav-items{
+  justify-self: center;
+}
+.nav-items a{
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}#myCarousel{
+  height: 70px;
+  margin-top: 30px;
+}
+.item{
+  height: 770px;
+}
+ .container{
+  padding: 0; 
+  margin: 0;
+  width: 100%;
+}
+#searchForm {
+	position:absolute;
+  	top:40%;
+}
+#searchForm2{
+  position:absolute;
+  top:40%;
+}
+.form-group{
+  background: rgba(255, 255, 255, 0.6);
+  height:  300px;
+  width: 600px;
+}
+#title{
+  text-align: center;
+  font-family: 'Mansalva', sans-serif;
+  font-size: 2.5em;
+}
+.form-group2{
+  background: rgba(255, 255, 255, 0.6);
+  height:  250px;
+  width: 600px;
+}
+#title2{
+  text-align: center;
+  font-family: 'Mansalva', sans-serif;
+  font-size: 2.5em;
+}
+
+#search-form{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+#search-form2{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 180px;
+  font-family: 'Mansalva', sans-serif;
+  font-size: 2em;
   
-  .item {
-      display: inline-block;
+}
+#search-form2 p{
+  align-self: flex-end;
+}
+#search-button
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+textarea{
+  resize: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+.recipe-item {
+    display: inline-block;
     background-color: lightblue;
     margin: 0 0 1em;
     border-radius: 15px 15px 15px 15px;
     width: 300px;
     margin-right: 10px;
     margin-left: 10px;
+    /* padding-left: 10px; */
   }
   h1{
       font-size: 1.1em;
@@ -21,15 +116,6 @@ header{
   a{
     font-size: .8em;
   }
-
-  
-   body {
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-color: #000; */
-    color:black;
-    font-size: 16px;
-    /* width: 100px; */
-  } 
 
   /* REFERENCE Got this from https://blog.jayway.com/2017/07/13/expandable-faq-items-no-javascript/ */
    .collapsible {
@@ -73,3 +159,4 @@ header{
     padding: 5px 0;
     transition: margin 0.25s, padding 0.25s, font-size 0.25s, opacity 0.5s 0.25s;
   } 
+ 
