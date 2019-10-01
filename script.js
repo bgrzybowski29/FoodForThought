@@ -6,7 +6,7 @@ document.querySelector("#searchForm").style.visibility = "hidden";
 
 function showSearch() {
   document.querySelector("#searchForm").style.visibility = "visible";
-  document.querySelector("#searchForm2").style.visibility = "hidden";
+  document.querySelector("#search-form-top").style.visibility = "hidden";
 }
 button.addEventListener("click", async function () {
 
@@ -21,6 +21,7 @@ button.addEventListener("click", async function () {
 
     masonry.innerHTML += `<div class="recipe-item">
     <img src="${dinnerItems[i].recipe.image}">
+    <div class="recipe-item-sub">
     <h1>${dinnerItems[i].recipe.label}</h1>
             <h2>Calories: ${dinnerItems[i].recipe.calories}</h2>
             <h2>Label: ${dinnerItems[i].recipe.dietLabels}</h2>
@@ -32,7 +33,8 @@ button.addEventListener("click", async function () {
             <span class="arrow">&gt;</span>
             <div class="collapsed">${dinnerItems[i].recipe.ingredientLines}</div>
             </label>
-            <h2>Prep Time: ${dinnerItems[i].recipe.totalTime}</h2>    
+            <h2>Prep Time: ${dinnerItems[i].recipe.totalTime}</h2>  
+            </div>  
     </div>`;
     document.querySelector('.masonry').scrollIntoView({
       behavior: 'smooth'

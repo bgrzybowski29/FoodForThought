@@ -46,7 +46,7 @@ header{
 	position:absolute;
   	top:40%;
 }
-#searchForm2{
+#search-form-top{
   position:absolute;
   top:40%;
 }
@@ -60,12 +60,12 @@ header{
   font-family: 'Mansalva', sans-serif;
   font-size: 2.5em;
 }
-.form-group2{
+.form-group-top{
   background: rgba(255, 255, 255, 0.6);
   height:  250px;
   width: 600px;
 }
-#title2{
+#title-top{
   text-align: center;
   font-family: 'Mansalva', sans-serif;
   font-size: 2.5em;
@@ -75,16 +75,30 @@ header{
   display: grid;
   grid-template-columns: 30% 70%;
 }
-#search-form2{
+#search-form-sub-top{
   display: grid;
-  grid-template-columns: 70% 30%;
-  height: 180px;
+  grid-template-columns: 60% 5% 35%;
+  height: 170px;
   font-family: 'Mansalva', sans-serif;
   font-size: 2em;
-  
 }
-#search-form2 p{
-  align-self: flex-end;
+
+#search-group-top hr{
+  border-color: black;
+  margin-bottom: 0;
+}
+#search-form-sub-top *{
+  align-self: center;
+  justify-self: center;
+}
+#search-form-sub-top div{
+  height: 100%;
+  border-left: 1px solid black;
+}
+#search-form-sub-top a
+{
+  align-self: center;
+  justify-self: center;
 }
 #search-button
 {
@@ -104,7 +118,13 @@ textarea{
     width: 300px;
     margin-right: 10px;
     margin-left: 10px;
-    /* padding-left: 10px; */
+  }
+  .recipe-item-sub img{
+    height: 300px;
+    width: 300px;
+  }
+  .recipe-item-sub{
+    padding-left: 5px;
   }
   h1{
       font-size: 1.1em;
@@ -116,7 +136,22 @@ textarea{
   a{
     font-size: .8em;
   }
-
+  footer {
+    padding-top: 10px;
+    text-align: center;
+    background-color:white;
+  }
+  .imagefooter{
+    width: 50px;
+    height: 50px;
+    /* background-color: black; */
+  
+  }
+  #copyright{
+    text-align: center;
+    color: black;
+  }
+  
   /* REFERENCE Got this from https://blog.jayway.com/2017/07/13/expandable-faq-items-no-javascript/ */
    .collapsible {
     display: block;
@@ -159,4 +194,7 @@ textarea{
     padding: 5px 0;
     transition: margin 0.25s, padding 0.25s, font-size 0.25s, opacity 0.5s 0.25s;
   } 
- 
+  @media only screen 
+  and (max-width: 630px){
+
+  }
