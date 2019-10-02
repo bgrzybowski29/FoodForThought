@@ -4,11 +4,12 @@ body{
   color:black;
   display: block;
 }
-.masonry{
-  margin-top: 800px;
+#data-section{
+  margin-top: 630px;
+  font-size: 3em;
+  text-align: center;
 }
 
-/* start Nav Section */
 header{
   overflow: hidden;
   background-color: white;
@@ -32,14 +33,12 @@ header{
   color: black;
 }
 
-
-/* End Nav section */
-
-
-
 #myCarousel{
   height: 70px;
   margin-top: 30px;
+}
+.carousel-inner{
+  max-height: 687px;
 }
 .item{
   height: 770px;
@@ -226,11 +225,14 @@ textarea{
       height: 100px;
     }
     .masonry{
-      margin-top: 200px;
+      /* margin-top: 200px; */
       padding-left: 20px;
       margin-right: 20px;
       display: flex;
       overflow-x: auto;
+    }
+    #data-section{
+      margin-top: 200px;
     }
     .masonry::-webkit-scrollbar {    display: none;}
     .recipe-item {
