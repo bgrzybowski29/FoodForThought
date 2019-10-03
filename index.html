@@ -26,9 +26,9 @@
           <li class="nav-items">
             <a href="index.html">Home</a>
           </li>
-          <li class="nav-items"><a href="#">About</a></li>
+          <li class="nav-items"><a href='javascript:;' onclick='showAbout();'>About</a></li>
           <li class="nav-items"><a href='javascript:;' onclick='showSearch();'>Get Started</a></li>
-          <li class="nav-items"><a href="#">Contact Us</a></li>
+          <li class="nav-items"><a href='javascript:;' onclick='showContact();'>Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -95,6 +95,23 @@
   </main>
   <p id="data-section"></p>
   <div class="masonry">
+  </div>
+  <div class="contact-container">
+    <form id="contact" action="" method="post">
+      <h4>Send us some Feedback!</h4>
+      <fieldset>
+        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Email Address" type="text" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit">Submit</button>
+      </fieldset>
+    </form>
   </div>
   <footer>
     <a href="https://github.com/bgrzybowski29/FoodForThought">
