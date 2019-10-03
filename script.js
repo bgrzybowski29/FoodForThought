@@ -76,35 +76,35 @@ async function buildRecipes(lblResults, queryString, numOfResults) {
     // </div>`;
 
     masonry.innerHTML += `<div class="card-container">
-    <div class="card u-clearfix">
-      <div class="card-body">
-        <span class="card-number card-circle subtle">${i + 1}</span>
-        <span class="card-author subtle">${dinnerItems[i].recipe.source}</span>
-        <h2 class="card-title">${dinnerItems[i].recipe.label}</h2>
-        <span class="card-description subtle">
-          <h3>Calories: ${Math.round(dinnerItems[i].recipe.calories)}</h3>
-          <h3>Label: ${dinnerItems[i].recipe.dietLabels}</h3>
-          <h3>Prep Time: ${dinnerItems[i].recipe.totalTime}</h3>
-          <a href="${dinnerItems[i].recipe.url}">Goto Recipe</a>
-          <label class="collapsible">
-            <input type="checkbox" />
-            <span class="collapser">Ingredients:</span>
-            <span class="arrow">&gt;</span>
-            <div class="collapsed">${dinnerItems[i].recipe.ingredientLines}</div>
-          </label>
-          <label class="collapsible">
-            <input type="checkbox" />
-            <span class="collapser">Health Labels:</span>
-            <span class="arrow">&gt;</span>
-            <div class="collapsed">${dinnerItems[i].recipe.healthLabels}</div>
-          </label>
-        </span>
+      <div class="card u-clearfix">
+        <div class="card-body">
+          <span class="card-number card-circle subtle">${i + 1}</span>
+          <span class="card-author subtle">${dinnerItems[i].recipe.source}</span>
+          <h2 class="card-title">${dinnerItems[i].recipe.label}</h2>
+          <span class="card-description subtle">
+            <h3>Calories: ${Math.round(dinnerItems[i].recipe.calories)}</h3>
+            <h3>Label: ${dinnerItems[i].recipe.dietLabels}</h3>
+            <h3>Prep Time: ${dinnerItems[i].recipe.totalTime}</h3>
+            <a href="${dinnerItems[i].recipe.url}">Goto Recipe</a>
+            <label class="collapsible">
+              <input type="checkbox" />
+              <span class="collapser">Ingredients:</span>
+              <span class="arrow">&gt;</span>
+              <div class="collapsed">${dinnerItems[i].recipe.ingredientLines}</div>
+            </label>
+            <label class="collapsible">
+              <input type="checkbox" />
+              <span class="collapser">Health Labels:</span>
+              <span class="arrow">&gt;</span>
+              <div class="collapsed">${dinnerItems[i].recipe.healthLabels}</div>
+            </label>
+          </span>
+        </div>
+        <img src="${dinnerItems[i].recipe.image}" alt="" class="card-media" />
       </div>
-      <img src="${dinnerItems[i].recipe.image}" alt="" class="card-media" />
-    </div>
-    <div class="card-shadow"></div>
-  </div>`;
-  }
+      <div class="card-shadow"></div>
+    </div>`;
+}
   document.querySelector("#data-section").innerHTML = `${lblResults}: ${queryString}`;
 }
 
@@ -166,3 +166,4 @@ function getRandomIngredients(num) {
   }
   return ingredientsList;
 }
+

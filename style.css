@@ -187,14 +187,14 @@ textarea{
   
   .card-container {
     margin: 25px 10px 10px;
-    position: relative;
+    /* position: relative; */
     width: 692px;
   }
   
   .card {
     background-color: #fff;
     padding: 10px;
-    position: relative;
+    /* position: relative; */
     box-shadow: 0 0 5px rgba(75, 75, 75, .07);
     z-index: 1;
   }
