@@ -51,28 +51,59 @@ async function buildRecipes(lblResults, queryString, numOfResults) {
   masonry.innerHTML = "";
   //loop to build results
   for (let i = 0; i < dinnerItems.length; i++) {
-    masonry.innerHTML += `<div class="recipe-item">
-    <img src="${dinnerItems[i].recipe.image}">
-    <div class="recipe-item-sub">
-    <h1>${dinnerItems[i].recipe.label}</h1>
-            <h2>Calories: ${Math.round(dinnerItems[i].recipe.calories)}</h2>
-            <h2>Label: ${dinnerItems[i].recipe.dietLabels}</h2>
-            <h2>Source: ${dinnerItems[i].recipe.source}</h2>
-            <a href="${dinnerItems[i].recipe.url}">Goto Recipe</a>
-            <label class="collapsible">
+    // masonry.innerHTML += `<div class="recipe-item">
+    // <img src="${dinnerItems[i].recipe.image}">
+    // <div class="recipe-item-sub">
+    // <h1>${dinnerItems[i].recipe.label}</h1>
+    //         <h2>Calories: ${Math.round(dinnerItems[i].recipe.calories)}</h2>
+    //         <h2>Label: ${dinnerItems[i].recipe.dietLabels}</h2>
+    //         <h2>Source: ${dinnerItems[i].recipe.source}</h2>
+    //         <a href="${dinnerItems[i].recipe.url}">Goto Recipe</a>
+    //         <label class="collapsible">
+    //         <input type="checkbox" />
+    //         <span class="collapser">Ingredients:</span>
+    //         <span class="arrow">&gt;</span>
+    //         <div class="collapsed">${dinnerItems[i].recipe.ingredientLines}</div>
+    //         </label>
+    //         <label class="collapsible">
+    //         <input type="checkbox" />
+    //         <span class="collapser">Health Labels:</span>
+    //         <span class="arrow">&gt;</span>
+    //         <div class="collapsed">${dinnerItems[i].recipe.healthLabels}</div>
+    //         </label>
+    //         <h2>Prep Time: ${dinnerItems[i].recipe.totalTime}</h2>  
+    //         </div>  
+    // </div>`;
+
+    masonry.innerHTML += `<div class="card-container">
+    <div class="card u-clearfix">
+      <div class="card-body">
+        <span class="card-number card-circle subtle">${i + 1}</span>
+        <span class="card-author subtle">${dinnerItems[i].recipe.source}</span>
+        <h2 class="card-title">${dinnerItems[i].recipe.label}</h2>
+        <span class="card-description subtle">
+          <h3>Calories: ${Math.round(dinnerItems[i].recipe.calories)}</h3>
+          <h3>Label: ${dinnerItems[i].recipe.dietLabels}</h3>
+          <h3>Prep Time: ${dinnerItems[i].recipe.totalTime}</h3>
+          <a href="${dinnerItems[i].recipe.url}">Goto Recipe</a>
+          <label class="collapsible">
             <input type="checkbox" />
             <span class="collapser">Ingredients:</span>
             <span class="arrow">&gt;</span>
             <div class="collapsed">${dinnerItems[i].recipe.ingredientLines}</div>
-            </label>
-            <label class="collapsible">
+          </label>
+          <label class="collapsible">
             <input type="checkbox" />
             <span class="collapser">Health Labels:</span>
             <span class="arrow">&gt;</span>
             <div class="collapsed">${dinnerItems[i].recipe.healthLabels}</div>
-            <h2>Prep Time: ${dinnerItems[i].recipe.totalTime}</h2>  
-            </div>  
-    </div>`;
+          </label>
+        </span>
+      </div>
+      <img src="${dinnerItems[i].recipe.image}" alt="" class="card-media" />
+    </div>
+    <div class="card-shadow"></div>
+  </div>`;
   }
   document.querySelector("#data-section").innerHTML = `${lblResults}: ${queryString}`;
 }
