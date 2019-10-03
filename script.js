@@ -1,38 +1,55 @@
-//const apiurl=`https://api.edamam.com/search?q=chicken,tomato,mozzarella&app_id=99c40f2e&app_key=a3d4da4b17ae857fc24756ac89d98778&excluded=garlic`;
 const APIURL = `https://api.edamam.com/search?app_id=99c40f2e&app_key=a3d4da4b17ae857fc24756ac89d98778&q=`;
+
+//get both buttons
 const button = document.querySelector("#search-button");
 const contactButton = document.querySelector("#contact-submit");
-
+//set the search and contact elements hidden
 document.querySelector("#searchForm").style.visibility = "hidden";
 document.querySelector(".contact-container").style.visibility = "hidden";
 
+//create recommendations
 buildRecipes("Recommendations", getRandomIngredients(2), 5);
+
+//shows search and hides top element
 function showSearch() {
   document.querySelector("#searchForm").style.visibility = "visible";
   document.querySelector("#search-form-top").style.visibility = "hidden";
 }
+
+//event listener for search
 button.addEventListener("click", async function () {
+  //validate user input
   let query = validateInput();
   if (query.length === 0) return;
+  //create the results based on the inputs
   buildRecipes("Search Results", query, 10);
+  //scroll to the results
   document.querySelector('#data-section').scrollIntoView({ behavior: 'smooth' });
 })
+
+//show the contact form
 function showContact() {
   document.querySelector(".contact-container").style.visibility = "visible";
 }
+//show about
 function showAbout() {
   alert("FoodForThought by Ben Grzybowski 2019.");
 }
+
+//event listener for contact click
 contactButton.addEventListener("click", async function () {
   document.querySelector(".contact-container").style.visibility = "hidden";
 })
 
+//build the recipes element
 async function buildRecipes(lblResults, queryString, numOfResults) {
+  //API call
   const response = await axios.get(APIURL + queryString + `&to=${numOfResults}`);
-  console.log(response);
   let dinnerItems = response.data.hits;
+  //get the element that will hold the results
   const masonry = document.querySelector(".masonry");
   masonry.innerHTML = "";
+  //loop to build results
   for (let i = 0; i < dinnerItems.length; i++) {
     masonry.innerHTML += `<div class="recipe-item">
     <img src="${dinnerItems[i].recipe.image}">
