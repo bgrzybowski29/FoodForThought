@@ -104,7 +104,7 @@ async function buildRecipes(lblResults, queryString, numOfResults) {
       </div>
       <div class="card-shadow"></div>
     </div>`;
-}
+  }
   document.querySelector("#data-section").innerHTML = `${lblResults}: ${queryString}`;
 }
 

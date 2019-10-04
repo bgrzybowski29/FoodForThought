@@ -11,6 +11,24 @@ body{
   text-align: center;
 }
 
+.button-start{
+  display:flex;
+}
+.button-start-a {
+  color: black !important;
+  text-transform: uppercase;
+  /* background: #ffffff; */
+  background: rgba(255, 255, 255, 0.6);
+  border: 4px solid black !important;
+  border-radius: 6px;
+  font-size: 25px;
+  align-self: center;
+  }
+  .button-start-a:hover {
+    color: #494949 !important;
+    border-radius: 50px;
+    border-color: #494949 !important;
+    }
 header{
   overflow: hidden;
   background-color: white;
@@ -61,15 +79,17 @@ header{
 }
 .form-group{
   background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
   height:  300px;
   width:40vw;
 }
 .title{
   text-align: center;
   font-family: 'Lato', sans-serif;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 .form-group-top{
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
   background: rgba(255, 255, 255, 0.6);
   height:  250px;
   width:40vw;
@@ -94,10 +114,10 @@ header{
   align-self: center;
   justify-self: center;
 }
-#search-form-sub-top div{
+/* #search-form-sub-top div{
   height: 100%;
   border-left: 1px solid black;
-}
+} */
 #search-form-sub-top a
 {
   align-self: center;
@@ -400,7 +420,7 @@ textarea{
     }
     .form-group-top{
       width:90vw;
-      height: 150px;
+      height: 160px;
     }
     #search-form-sub-top{
       height: 100px;
