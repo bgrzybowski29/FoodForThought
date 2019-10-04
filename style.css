@@ -114,10 +114,7 @@ header{
   align-self: center;
   justify-self: center;
 }
-/* #search-form-sub-top div{
-  height: 100%;
-  border-left: 1px solid black;
-} */
+
 #search-form-sub-top a
 {
   align-self: center;
@@ -257,7 +254,6 @@ textarea{
   }
   
   .card-description {
-    /* display: inline-block; */
     display: grid;
     grid-template-columns: 50% 50%;
     font-weight: 300;
@@ -402,6 +398,7 @@ textarea{
     display: flex;
     overflow-x: auto;
   }
+  .masonry::-webkit-scrollbar {    display: none;}
   @media only screen 
   and (max-width: 630px){
     body{
@@ -426,7 +423,6 @@ textarea{
       height: 100px;
     }
     .masonry{
-      /* margin-top: 200px; */
       padding-left: 20px;
       margin-right: 20px;
       display: flex;
@@ -435,7 +431,7 @@ textarea{
     #data-section{
       margin-top: 200px;
     }
-    .masonry::-webkit-scrollbar {    display: none;}
+    
     .recipe-item {
       align-self: center;
     }
