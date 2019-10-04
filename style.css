@@ -17,11 +17,10 @@ body{
 .button-start-a {
   color: black !important;
   text-transform: uppercase;
-  /* background: #ffffff; */
   background: rgba(255, 255, 255, 0.6);
   border: 4px solid black !important;
   border-radius: 6px;
-  font-size: 25px;
+  font-size: 2vw;
   align-self: center;
   }
   .button-start-a:hover {
@@ -86,7 +85,7 @@ header{
 .title{
   text-align: center;
   font-family: 'Lato', sans-serif;
-  font-size: 3em;
+  font-size: 3vw;
 }
 .form-group-top{
   height:  250px;
@@ -103,7 +102,7 @@ header{
   grid-template-columns: 60% 5% 35%;
   height: 170px;
   font-family: 'Lato', sans-serif;
-  font-size: 2em;
+  font-size: 2vw;
 }
 
 #search-group-top hr{
@@ -441,4 +440,13 @@ textarea{
     textarea{
       font-size: 1em;
     } 
+    .button-start-a {
+      font-size: 5vw;
+    }
+    #search-form-sub-top{
+      font-size: 5vw;
+    }
+    .title{
+      font-size: 6vw;
+    }
   }
